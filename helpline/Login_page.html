@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-container {
+            width: 350px;
+            padding: 40px;
+            height: 320px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-dialog {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            background-color: #ffcccc;
+            color: red;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: lightgoldenrodyellow; 
+            transition: border-color 0.3s; 
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="error-dialog" id="error-dialog">Password must be 8-15 characters long and must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.</div>
+    <div class="login-container">
+        <h1>Login</h1><br>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <p class="error-message" id="password-error"></p>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const passwordInput = document.getElementById("password");
+        const errorDialog = document.getElementById("error-dialog");
+
+        loginForm.addEventListener("submit", function(event) {
+            const password = passwordInput.value;
+
+            // Check if password contains at least one special character
+            if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/.test(password)) {
+                event.preventDefault();
+                errorDialog.style.display = "block"; 
+            }
+            else {
+                errorDialog.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

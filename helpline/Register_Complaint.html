@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Complaint Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .top-text {
+            background-color: lightgrey;
+            padding: 10px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid green;
+            border-radius: 5px;
+            background-color: lightgoldenrodyellow; 
+            transition: border-color 0.3s; 
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus
+        textarea {
+            outline: none;
+            border-color: #007bff; 
+        }
+        textarea {
+            height: 100px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .required {
+            color: red;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid green;
+            border-radius: 5px;
+            background-color: lightgoldenrodyellow; 
+            transition: border-color 0.3s; 
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #007bff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="top-text">
+        <h1>Performa For Reporting The First Information (FIR) Of A Cognizable Offence</h1>
+        <p>(Under Section 154 Of The Criminal Procedure Code)</p>
+    </div>
+    <div class="container">
+        <h1>Register New Complaint</h1>
+        <br>
+        <form>
+            <label for="name">First Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">Last Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">Father's / Husband's Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required> <br>
+            
+            <label for="phone">Phone Number<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required><br>
+        
+            <br><label for="address">Address<span class="required">*</span></label>
+            <textarea type="text" id="address" name="address" required></textarea>
+
+            <h4>Place Of Occurence</h4>
+            <label for="Station">Police Station:<span class="required">*</span></label>
+            <input type="text" id="Station" name="Station" required>
+
+            <label for="District">District:<span class="required">*</span></label>
+            <input type="text" id="District" name="District" required>
+
+            <label for="Distance">Distance from the Police Station:<span class="required">*</span></label>
+            <input type="text" id="Distance" name="Distance" required>
+
+            <label for="Direction">Direction from the Police Station:<span class="required">*</span></label>
+            <input type="text" id="Direction" name="Direction" required>
+
+            <br><label for="date">Date of Occurence:<span class="required">*</span></label>
+            <input type="date" id="date" name="date" required><br>
+
+            <br><label for="time">Hour Of Occurence:<span class="required">*</span></label>
+            <input type="text" id="time" name="time" required>
+
+            <h4>Offence:</h4>
+            <label for="offence">Nature of the offence: (e.g. Murder, Theft, Rape, etc.)<span class="required">*</span></label>
+            <input type="text" id="offence" name="offence" required>
+
+            <label for="particulars">Particulars of the property:<span class="required"></span></label>
+            <input type="text" id="particulars" name="particulars" required>
+
+            <label for="Description">Description of the accused:<span class="required"></span></label>
+            <textarea type="text" id="Description" name="Description" required></textarea>
+
+            <label for="witness">Details of the witness: (if any)<span class="required"></span></label>
+            <input type="text" id="witness" name="witness" required>
+            
+            <label for="complaint">Description<span class="required"></span>:</label>
+            <textarea type="text" id="complaint" name="complaint" required></textarea>
+
+            <button type="submit" class="button">Submit Complaint</button>
+            <input type="reset" value="Reset" class="button">
+        </form>
+    </div>
+</body>
+</html>

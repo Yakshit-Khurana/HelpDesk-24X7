@@ -1,0 +1,52 @@
+body{
+	background:burlywood;
+}
+h1{
+	background-color: #2a2a87;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+#img1{
+	margin-left: 150px; margin-top: 15%;
+	border-radius: 5px;
+	height: 200px;
+	width: 200px;
+	border:  5px solid #0c455f;
+}
+
+div{
+	display: inline-block;
+}
+#info{
+	margin-top: 0pxs;
+	border-radius: 10px;
+	height: 205px;
+	width: 200px;
+	background-color: black;
+	opacity: 80%;
+}
+#img2{border-radius: 5px;
+	border:  5px solid #0c455f;
+	height: 200px;
+	width: 200px;
+	margin-left: 80px;
+	
+
+}
+#outer{
+    margin-left: 5%;
+    margin-right: 5%;
+	height: 550px;
+	width: 90%;
+	border: 10px solid #0c455f;
+}
+.change{
+	visibility: hidden;
+}
+.container:hover+ .change{
+	visibility: visible;
+	
+	color: white;
+	
+}
