@@ -1,4 +1,6 @@
 # HelpDesk-24X7
+Designed a 24/7 Helpdesk Application Frontend with responsive HTML, CSS, and JavaScript, ensuring seamless user interaction. Implemented intuitive UI elements for easy navigation and accessibility. Prioritized user experience with dynamic content display and efficient communication features. Enhanced support accessibility and responsiveness for optimal user satisfaction.
+
 The design of the website is inspired by Delhi Police Website, Digital India and other government websites.
 ![image](https://github.com/Yakshit-Khurana/HelpDesk-24X7/assets/76546067/a7f76c85-342a-4ad3-9ac5-fe5bcd7a3271)
 Emergency button opens external link containing list of all the emergency contacts
